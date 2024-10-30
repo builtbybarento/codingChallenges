@@ -1,4 +1,4 @@
-https://www.codewars.com/users/barento
+// https://www.codewars.com/users/barento - more on my profile. 
 
 
 // 6 kyu Make the Deadfish Swim
@@ -29,11 +29,11 @@ https://www.codewars.com/users/barento
             
             console.log(newData)
             
-            //now the code has removed everything that doesnt get pushed into the array
+            //now the code has removed everything that doesnt get pushed into the array. might have been unnecessary depending on the test cases presented but I'm not sure
             
             newData = newData.split('o')
             
-                console.log(newData) //['iiii', 'iiiis', 'iiiid']
+                console.log(newData)
             
             let result = []
             let val = 0
@@ -46,17 +46,29 @@ https://www.codewars.com/users/barento
             })            
             return result
         }
-            //   let arr = newData.split('o')
-            //   let newArr = []
-            //   arr.forEach(x=>{
-            //     let val = 0
-            //     for(let i = 0; i<str.length; i++){
-            //       str[i] == 'i' ? val+= 1 : str[i] == 'd'  ? val -= 1: val *= val
-            //     }
-            //     newArr.push(val)   //old code refactored
 
-            //   while(data[data.length-1] != 'o'){
-            //     data = data.slice(0, data.length-2)
-            
-            //find index of last o, return slice
+
+//5 kyu Perimeter of squares in a rectangle https://www.codewars.com/kata/559a28007caad2ac4e000083
+// The drawing shows 6 squares the sides of which have a length of 1, 1, 2, 3, 5, 8. It's easy to see that the sum of the perimeters of these squares is : 4 * (1 + 1 + 2 + 3 + 5 + 8) = 4 * 20 = 80 
+
+// Could you give the sum of the perimeters of all the squares in a rectangle when there are n + 1 squares disposed in the same manner as in the drawing:
+
+// Hint:
+// See Fibonacci sequence
+
+// Ref:
+// http://oeis.org/A000045
+
+// The function perimeter has for parameter n where n + 1 is the number of squares (they are numbered from 0 to n) and returns the total perimeter of all the squares.
+
+// perimeter(5)  should return 80
+// perimeter(7)  should return 216
+
+function perimeter(n) {
+    let arr = [1]
+    for(let i=0; i<n; i++){
+      arr.push(arr[i]+arr[i-1]||1)  //add two side lengths
+    }
+   return arr.reduce((acc,x)=>acc+x*4, 0)
+ }
 
