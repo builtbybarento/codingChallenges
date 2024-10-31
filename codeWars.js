@@ -72,3 +72,12 @@ function perimeter(n) {
    return arr.reduce((acc,x)=>acc+x*4, 0)
  }
 
+ function perimeter(n) {
+    let arr = [1]
+    for(let i=0; i<n; i++){
+      arr.push(arr[i]+arr[i-1]||1)  //add two side lengths
+    }
+   
+   
+   return arr.reduce((acc,x)=>acc+x*4, 0)
+ }
