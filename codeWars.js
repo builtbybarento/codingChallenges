@@ -47,6 +47,7 @@
             return result
         }
 
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 //5 kyu Perimeter of squares in a rectangle https://www.codewars.com/kata/559a28007caad2ac4e000083
 // The drawing shows 6 squares the sides of which have a length of 1, 1, 2, 3, 5, 8. It's easy to see that the sum of the perimeters of these squares is : 4 * (1 + 1 + 2 + 3 + 5 + 8) = 4 * 20 = 80 
@@ -72,12 +73,53 @@ function perimeter(n) {
    return arr.reduce((acc,x)=>acc+x*4, 0)
  }
 
- function perimeter(n) {
-    let arr = [1]
-    for(let i=0; i<n; i++){
-      arr.push(arr[i]+arr[i-1]||1)  //add two side lengths
-    }
-   
-   
-   return arr.reduce((acc,x)=>acc+x*4, 0)
- }
+ ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// 6 kyu Count characters in your string
+
+// The main idea is to count all the occurring characters in a string. If you have a string like aba, then the result should be {'a': 2, 'b': 1}.
+
+// What if the string is empty? Then the result should be empty object literal, {}
+
+function count(string) {
+    const solution = {}
+    string.split('').forEach(x=>{
+      (solution[x]) ? solution[x] += 1 : solution[x] = 1
+    })
+    return solution;
+  }
+  
+  count('aba') //test returns {a: 2, b: 1}
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+// 7 kyu  Return a sorted list of objects
+  
+//   Description:
+//   You'll be passed an array of objects (list) - you must sort them in descending order based on the value of the specified property (sortBy).
+
+// Example
+// When sorted by "a", this:
+
+// [
+//   {"a": 1, "b": 3},
+//   {"a": 3, "b": 2},
+//   {"a": 2, "b": 40},
+//   {"a": 4, "b": 12}
+// ]
+// should return:
+
+// [
+//   {"a": 4, "b": 12},
+//   {"a": 3, "b": 2},
+//   {"a": 2, "b": 40},
+//   {"a": 1, "b": 3}
+// ]
+// The values will always be numbers, and the properties will always exist.
+
+function sortList (sortBy, list) {
+  list.sort((a, b) => b[sortBy] - a[sortBy] )
+  return list
+}
