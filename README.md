@@ -6,26 +6,14 @@ This repository is a collection of my JavaScript solutions for Codewars challeng
 
 ![alt](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaDgBT3QWhn-DK_OLIXAmDoYJT_rW-Hpi1TmCwnE9xxQvxQPZAKZ7ttxnPQhFuWtWH6y8&usqp=CAU)
 
-## How It's Made:
+**Tech used:**  JavaScript
 
-**Tech used:** HTML, CSS, JavaScript, Framework of choice
+Primarily focused on Javascript to work on React and full stack web development. Will also be ocasionally working on python in the near future. 
+Primarily focused on JavaScript for building dynamic, responsive web applications and interactive user interfaces, especially within the React ecosystem, as well as full-stack development, integrating front-end applications with back-end services and RESTful APIs, handling database interactions, and ensuring secure and optimized server-side processes.
 
-Here's where you can go to town on how you actually built this thing. Write as much as you can here, it's totally fine if it's not too much just make sure you write *something*. If you don't have too much experience on your resume working on the front end that's totally fine. This is where you can really show off your passion and make up for that ten fold.
+Will be adding python soon too. 
 
-## Optimizations
-*(optional)*
-
-You don't have to include this section but interviewers *love* that you can not only deliver a final product that looks great but also functions efficiently. Did you write something then refactor it later and the result was 5x faster than the original implementation? Did you cache your assets? Things that you write in this section are **GREAT** to bring up in interviews and you can use this section as reference when studying for technical interviews!
 
 ## Lessons Learned:
 
-No matter what your experience level, being an engineer means continuously learning. Every time you build something you always have those *whoa this is awesome* or *wow I actually did it!* moments. This is where you should share those moments! Recruiters and interviewers love to see that you're self-aware and passionate about growing.
-
-## Examples:
-Take a look at these couple examples that I have in my own portfolio:
-
-**Palettable:** https://github.com/alecortega/palettable
-
-**Twitter Battle:** https://github.com/alecortega/twitter-battle
-
-**Patch Panel:** https://github.com/alecortega/patch-panel
+ Doing daily coding challenges has been a transformative practice, pushing me to explore new programming concepts and refine essential skills. By consistently engaging with Codewars, I’m challenged to think critically, optimize my solutions, and deepen my understanding of core programming principles. Codewars offers a variety of problem difficulties and topics, which not only strengthens my problem-solving abilities but also keeps my learning process dynamic and engaging. This daily commitment has led to noticeable improvements in my coding efficiency, attention to detail, and adaptability in tackling different types of problems. Each challenge inspires me to strive for better performance and cleaner, more efficient code.   
