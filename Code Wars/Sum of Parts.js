@@ -33,3 +33,4 @@ function partsSums(ls) {
     return arr
   }, [0]).reverse()       
 }
+    
