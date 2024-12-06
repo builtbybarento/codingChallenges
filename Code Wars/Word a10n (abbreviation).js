@@ -23,9 +23,7 @@
 
 function abbreviate(string) {
     let arr = string.replaceAll('-', ' ').replaceAll('?', '').replaceAll(',', '').replaceAll('!', '').replaceAll('.', '').split(' ')
-    console.log(arr)
-    
-    let abbs = []
+
     for(let i=0; i<arr.length; i++){
       if(arr[i].length>3){
         let abb = arr[i].split('')
@@ -34,6 +32,7 @@ function abbreviate(string) {
        string = string.replace(arr[i], abb.join(''))
       }
     }
+    
     return string
   }
   abbreviate("You need, need not want,")
