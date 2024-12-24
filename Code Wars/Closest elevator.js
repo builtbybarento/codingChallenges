@@ -1,4 +1,4 @@
-8 kyu - Closest elevator
+// 8 kyu - Closest elevator
 
 
 // Description:
