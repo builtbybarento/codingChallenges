@@ -22,26 +22,27 @@
 // Solution:
 
 function getCard() {
-    let card = []
-    while(card.length<5){
-      let number = Math.floor(Math.random()*14)+1
-      if (!card.some(x=>x=='B'+ number)) card.push('B'+ number)
-    }
-    while(card.length<10){
-      let number = Math.floor(Math.random()*15)+16
-      if (!card.some(x=>x=='I'+ number)) card.push('I'+ number)
-    }
-    while(card.length<14){
-      let number = Math.floor(Math.random()*15)+31
-      if (!card.some(x=>x=='N'+ number)) card.push('N'+ number)
-    }
-    while(card.length<19){
-      let number = Math.floor(Math.random()*15)+46
-      if (!card.some(x=>x=='G'+ number)) card.push('G'+ number)
-    }while(card.length<24){
-      let number = Math.floor(Math.random()*15)+61
-      if (!card.some(x=>x=='O'+ number)) card.push('O'+ number)
-    }
+	let card = [];
+	while (card.length < 5) {
+		let number = Math.floor(Math.random() * 14) + 1;
+		if (!card.some((x) => x == "B" + number)) card.push("B" + number);
+	}
+	while (card.length < 10) {
+		let number = Math.floor(Math.random() * 15) + 16;
+		if (!card.some((x) => x == "I" + number)) card.push("I" + number);
+	}
+	while (card.length < 14) {
+		let number = Math.floor(Math.random() * 15) + 31;
+		if (!card.some((x) => x == "N" + number)) card.push("N" + number);
+	}
+	while (card.length < 19) {
+		let number = Math.floor(Math.random() * 15) + 46;
+		if (!card.some((x) => x == "G" + number)) card.push("G" + number);
+	}
+	while (card.length < 24) {
+		let number = Math.floor(Math.random() * 15) + 61;
+		if (!card.some((x) => x == "O" + number)) card.push("O" + number);
+	}
 
-  return card
+	return card;
 }
