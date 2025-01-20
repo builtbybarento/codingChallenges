@@ -57,3 +57,22 @@ var climbStairs = function(n) {
 //add i-1 and i-2
 //dynamic programming solution would be better. 
 
+
+//Dynamic Programming Solution: 
+
+
+/**
+ * @param {number} n
+ * @return {number}
+ */
+var climbStairs = function(n) {
+  let first = 1
+  let second = 1
+  let third = 1
+  for (let i = 0; i<n-1; i++){
+      third = second + first
+      first = second
+      second = third
+  }
+  return third
+};
