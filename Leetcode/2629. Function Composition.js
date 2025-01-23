@@ -65,3 +65,19 @@ var compose = function(functions) {
  ///[function1(a), function2(b), function3(c)] => function1(function2(function3))
 //just apply each function in the correct order, backwards 
 //
+
+//also but less optimal for some reason:
+
+/**
+ * @param {Function[]} functions
+ * @return {Function}
+ */
+var compose = function(functions) {
+    
+    return function(x) { //return a function that is a composition
+        while(functions.length>0){
+            x = functions.pop()(x)
+        }
+        return x
+    }
+};
