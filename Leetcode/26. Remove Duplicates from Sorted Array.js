@@ -58,3 +58,25 @@ var removeDuplicates = function(nums) {
         }
     }
 };
+
+
+//2 pointer solution: 
+
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var removeDuplicates = function(nums) {
+    let p1 = 1
+    let p2 = 1
+
+    while (p2<nums.length){
+        if (nums[p2] > nums[p1 -1] ){//if the pointer is bigger than the last number
+            nums[p1] = nums[p2] //replace the next num with the unique num 
+            p1++ //p1 only moves when a unique number is found on p2
+        }
+        p2++ //if nothing found, p2 moves anyways 
+    }
+
+    return p1 //p1 equivalent to the number of elements in the array
+};
