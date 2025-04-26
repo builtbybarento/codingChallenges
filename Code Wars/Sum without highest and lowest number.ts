@@ -19,6 +19,10 @@
 
 export function sumArray(array:number[] | null) : number {
     if(array === null || array.length === 1){return 0}
-    return array.reduce((acc,x)=>acc+x, 0) - Math.max(...array)-Math.min(...array)
+    array = array.sort((a,b)=>a-b)
+    array.pop()
+    array.shift()
+    if(array.length === 0){ return 0}
+    return array.reduce((acc,x)=>acc+x, 0)
   }
   //given an array of numbers, remove the highst and lowest then give the sum
