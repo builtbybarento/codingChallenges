@@ -1,4 +1,4 @@
-// 7 kyu - Sort SVGAnimatedNumberList
+// 7 kyu - Sort Numbers
 
 // Description:
 
