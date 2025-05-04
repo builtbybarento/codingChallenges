@@ -6,13 +6,11 @@ This repository is a collection of my JavaScript solutions for Codewars challeng
 
 ![alt](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaDgBT3QWhn-DK_OLIXAmDoYJT_rW-Hpi1TmCwnE9xxQvxQPZAKZ7ttxnPQhFuWtWH6y8&usqp=CAU)
 
-**Tech used:**  JavaScript
+**Tech used:**  JavaScript, Typescript, Python
 
-Primarily focused on Javascript to work on React and full stack web development. Will also be ocasionally working on python in the near future. 
-Primarily focused on JavaScript for building dynamic, responsive web applications and interactive user interfaces, especially within the React ecosystem, as well as full-stack development, integrating front-end applications with back-end services and RESTful APIs, handling database interactions, and ensuring secure and optimized server-side processes.
+Primarily focused on JavaScript and Typescript for building dynamic, responsive web applications and interactive user interfaces, especially within the React ecosystem, as well as full-stack development, integrating front-end applications with back-end services and RESTful APIs, handling database interactions, and ensuring secure and optimized server-side processes.
 
-Will be adding python soon too. 
-
+Also incorporating some Python for later use with other API frameworks, etc. 
 
 ## Lessons Learned:
 
