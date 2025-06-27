@@ -44,3 +44,22 @@ export function rot13(str: string): string {
 // need to add 13 to the place of the digit
 // if the place of the digit is 14th or later, minus 13 
 //N 14 - A 1 
+
+//USING CHARCODE INSTEAD OF CREATING MY OWN ALPHABET STRINGS
+
+export function rot13(str: string): string {
+  
+  return str.split('').map(x=>{
+    let charCode = x.charCodeAt(0)
+    if ((charCode>=65 && charCode<=77) || (charCode>=97 && charCode<=109)){
+      return String.fromCharCode(charCode+13)
+    }if ((charCode>=78 && charCode<=90) || (charCode>=110 && charCode<=122)){
+      return String.fromCharCode(charCode-13)
+    }return x
+  }).join('')
+}
+
+// 'a'.charCodeAt() = 97
+// 'z'.charCodeAt() = 122
+// 'A'.charCodeAt() = 65
+// 'Z'.charCodeAt() = 90
