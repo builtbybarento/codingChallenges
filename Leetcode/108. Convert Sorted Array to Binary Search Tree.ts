@@ -1,33 +1,33 @@
-108. Convert Sorted Array to Binary Search Tree - Easy
+// 108. Convert Sorted Array to Binary Search Tree - Easy
 
-Description:
+// Description:
 
-Given an integer array nums where the elements are sorted in ascending order, convert it to a height-balanced binary search tree.
+// Given an integer array nums where the elements are sorted in ascending order, convert it to a height-balanced binary search tree.
 
  
 
-Example 1:
+// Example 1:
 
 
-Input: nums = [-10,-3,0,5,9]
-Output: [0,-3,9,-10,null,5]
-Explanation: [0,-10,5,null,-3,null,9] is also accepted:
+// Input: nums = [-10,-3,0,5,9]
+// Output: [0,-3,9,-10,null,5]
+// Explanation: [0,-10,5,null,-3,null,9] is also accepted:
 
-Example 2:
+// Example 2:
 
 
-Input: nums = [1,3]
-Output: [3,1]
-Explanation: [1,null,3] and [3,1] are both height-balanced BSTs.
+// Input: nums = [1,3]
+// Output: [3,1]
+// Explanation: [1,null,3] and [3,1] are both height-balanced BSTs.
  
 
-Constraints:
+// Constraints:
 
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-nums is sorted in a strictly increasing order.
+// 1 <= nums.length <= 104
+// -104 <= nums[i] <= 104
+// nums is sorted in a strictly increasing order.
 
-Solution:
+// Solution:
 
 /**
  * Definition for a binary tree node.
@@ -63,3 +63,17 @@ function sortedArrayToBST(nums: number[]): TreeNode | null {
 //right of -7 is -8, -3. divide by 2 get -8 as center (1st element). right becomes -8. 
 //left of -8 is nothing. right of -3 by itself, so right becomes -3
 //then go to right side of 0. 1 5 8 9 4/2 = 2, center is 
+
+//Better Solution: 
+
+function sortedArrayToBST(nums: number[]): TreeNode | null {
+    function splitEven(leftside, rightside){
+        if (rightside<leftside) return null
+        let center = Math.floor((rightside+leftside)/2)
+        let node = new TreeNode(nums[center])
+        node.left = splitEven(leftside, center-1)
+        node.right = splitEven(center+1, rightside)
+        return node
+    }
+    return splitEven(0, nums.length-1)
+};
