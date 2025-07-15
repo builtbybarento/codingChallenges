@@ -56,3 +56,16 @@ function gcdOfStrings(str1: string, str2: string): string {
 //abc abc abc abc abc abc, abcabcabcabc. 6x and 4xabc
     //try abcabcabcabc (4x). doesnt work. 
     //cut in half. abcabc -> works
+
+//Proper 'mathematical' solution:
+
+function gcdOfStrings2(str1: string, str2: string): string {
+    if (str1+str2 !== str2+str1) return ''
+
+    function gcd(a,b){
+        if (b===0) return a
+        return gcd(b, a%b)
+    }
+
+    return str1.slice(0, gcd(str1.length, str2.length))
+};
