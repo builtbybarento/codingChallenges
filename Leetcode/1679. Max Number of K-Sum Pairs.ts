@@ -39,7 +39,7 @@ function maxOperations(nums: number[], k: number): number {
     for (const num of nums){
         if (list.get(k-num)){
             count++
-            list.set(k-num, list.get(k-num)-1)
+            list.set(k-num, list.get(k-num)!-1)
         }
         else list.set(num, (list.get(num) || 0) + 1)
     }
