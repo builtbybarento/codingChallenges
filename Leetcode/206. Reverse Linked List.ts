@@ -60,3 +60,20 @@ function reverseList(head: ListNode | null): ListNode | null {
         point.next = null
         return head
 };
+
+//No stack solution (3 pointers?):
+
+function reverseList2(head: ListNode | null): ListNode | null {
+        if (!head || !head.next) return head
+        let neww = null
+        let current = head
+        let prev = current
+        while (current){
+            current = current.next
+            prev.next = neww
+            neww = prev
+            prev = current
+        }
+        return neww
+        //current 1->2. 1->null. neww = 1->null. prev moves to 2. current ->3. prev2->1->null. neww = 2->1->null. prev = 3 
+};
