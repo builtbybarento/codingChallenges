@@ -77,7 +77,7 @@ function pathSum(root: TreeNode | null, targetSum: number): number {
         routes.set(currentTotal, (routes.get(currentTotal) || 0) + 1)
         check(node.left, currentTotal)
         check(node.right, currentTotal)
-        routes.set(currentTotal, routes.get(currentTotal)! - 1)
+        routes.set(currentTotal, routes.get(currentTotal) - 1)
         //backtrack and remove 1 from the count at currentTotal
     }
     check(root, 0)
