@@ -32,7 +32,7 @@
 //     -3 * 104 <= nums[i] <= 3 * 104
 //     Each element in the array appears twice except for one element which appears only once.
 
-// Solution: 
+// Solution: not o(1) space though
 
 /**
  * @param {number[]} nums
@@ -49,3 +49,25 @@ var singleNumber = function(nums) {
   }
   return 1 * Object.keys(obj).find(x=>obj[x]==1)
 };
+
+//Constant Space Bitwise Solution:
+
+function singleNumber(nums: number[]): number {
+    let ans = 0
+    for (const num of nums){
+        ans ^= num
+    }
+    return ans
+};
+
+//100
+//001
+//010
+//001
+//010 --> ans is 100 only seen once
+
+//100
+//101
+//111
+//110
+//100 --> with XOR ^
